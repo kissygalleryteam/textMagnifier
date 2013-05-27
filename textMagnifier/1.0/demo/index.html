@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>输入框放大镜</title>
+    <style type="text/css">
+        .confirm-unit{
+            clear: both;
+            overflow: auto;
+        }
+        .confirm-area .fill-label{
+            width: 100px;
+            text-align: right;
+            font-size:14px;
+            float: left;
+            height: 29px;
+            line-height: 29px;
+        }
+        .confirm-area .text-input{
+            font-size: 14px;
+            vertical-align: middle;
+            padding: 3px;
+            font-weight: bold;
+            height: 21px;
+            width:215px;
+            float: left;
+        }
+    </style>
+    <script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy-min.js" charset="utf-8"></script>
+</head>
+<body>
+<h2>输入框放大镜</h2>
+
+<div class="confirm-area">
+    <div class="confirm-unit" style="margin-top: 100px;margin-bottom: 30px;">
+        <label for="J_receiveMob" class="fill-label">接收手机号码：</label>
+        <input type="text" class="text-input" id="J_receiveMob" maxlength="11" autocomplete="off"/>
+    </div>
+    <div class="confirm-unit">
+        <label for="J_IDCard" class="fill-label">身份证号码：</label>
+        <input type="text" class="text-input" id="J_IDCard" maxlength="18" autocomplete="off" />
+    </div>
+</div>
+
+<script>
+    var S = KISSY;
+    if (S.Config.debug) {
+        var srcPath = "../../../";
+        S.config({
+            packages:[
+                {
+                    name:"gallery",
+                    path:srcPath,
+                    charset:"utf-8",
+                    ignorePackageNameInUri:true
+                }
+            ]
+        });
+    }
+
+    S.use('gallery/textMagnifier/1.0/index',function (S,TextMagnifier) {
+        //手机号码放大
+        new TextMagnifier({
+            id:"#J_receiveMob",//必填
+            align:"top",
+            splitType:[3,4,4],
+            delimiter:' '
+        }).render();
+
+        //身份证放大
+        new TextMagnifier({
+            id:"#J_IDCard",
+            splitType:[6,4,4,4],
+            delimiter:' ',
+            width:253,
+            explainText:"请输入18位数字的身份证号码"
+        }).render();
+    });
+</script>
+</body>
+</html>
