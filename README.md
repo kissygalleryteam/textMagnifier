@@ -1,4 +1,4 @@
-gallery
+textMagnifier
 =======
 
 输入框放大镜
