@@ -37,7 +37,7 @@ KISSY.add('gallery/textMagnifier/1.1/index',function (S, Node, Base, D, E, O,XTe
             if(!inputEL.length) return self;
             var textEL;
             var content=self._getHtml();
-            var width = self.get('width') ? self.get('width') : D.outerWidth(inputEL)-2;
+            var width = self.get('width') ? self.get('width') : D.outerWidth(inputEL);
             var popup= new O.Popup({
                 prefixCls:self.get('prefixCls'),
                 content:content,
