@@ -43,7 +43,7 @@ KISSY.add(function (S, Node, Base, D, E, O,XTemplate) {
                 width: width
             });
             self.set('popup',popup);
-
+            var delimiter = self.get('delimiter');
             var formatStr=function(str){
                 var output=[];
                 var start=0;
@@ -54,7 +54,7 @@ KISSY.add(function (S, Node, Base, D, E, O,XTemplate) {
                     }
                     start+=self.get('splitType')[i];
                 }
-                return output.join(self.get('delimiter'));
+                return output.join(delimiter);
             };
 
 
@@ -103,6 +103,9 @@ KISSY.add(function (S, Node, Base, D, E, O,XTemplate) {
             getter:function(v) {
                 return $(v);
             }
+        },
+        delimiter:{
+            value:','
         },
         /**
          * 分割

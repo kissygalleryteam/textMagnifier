@@ -49,7 +49,7 @@ KISSY.add('gallery/textMagnifier/1.1/index',function (S, Node, Base, D, E, O,XTe
                 width: width
             });
             self.set('popup',popup);
-
+            var delimiter = self.get('delimiter');
             var formatStr=function(str){
                 var output=[];
                 var start=0;
@@ -60,7 +60,7 @@ KISSY.add('gallery/textMagnifier/1.1/index',function (S, Node, Base, D, E, O,XTe
                     }
                     start+=self.get('splitType')[i];
                 }
-                return output.join(self.get('delimiter'));
+                return output.join(delimiter);
             };
 
 
@@ -109,6 +109,9 @@ KISSY.add('gallery/textMagnifier/1.1/index',function (S, Node, Base, D, E, O,XTe
             getter:function(v) {
                 return $(v);
             }
+        },
+        delimiter:{
+            value:','
         },
         /**
          * 分割
