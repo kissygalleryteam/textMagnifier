@@ -27,4 +27,6 @@ textMagnifier
     [+] target属性
     [+] prefixCls属性
 
+### V1.2
 
+    [!] 默认样式修正
