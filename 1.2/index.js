@@ -112,7 +112,7 @@ KISSY.add(function (S, Node, Base, D, E, O,XTemplate) {
          * @type {String}
          */
         splitType: {
-            value: [3, 4, 4],
+            value: [4, 4, 4],
             setter: function(v) {
                 return $(v);
             },

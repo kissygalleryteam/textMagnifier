@@ -118,7 +118,7 @@ KISSY.add('gallery/textMagnifier/1.2/index',function (S, Node, Base, D, E, O,XTe
          * @type {String}
          */
         splitType: {
-            value: [3, 4, 4],
+            value: [4, 4, 4],
             setter: function(v) {
                 return $(v);
             },
