@@ -2,28 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>输入框放大镜</title>
-    <script src="http://g.tbcdn.cn/kissy/k/1.3.0/kissy-min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.0/??css/dpl/base-min.css,css/dpl/forms-min.css,button/assets/dpl-min.css">
+    <title>Textmagnifier的demo</title>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.2/seed-min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.0/css/dpl/base-min.css">
 </head>
 <body>
-<h2>输入框放大镜</h2>
-<form class="form-horizontal refund-form logistics-form" id="J_Auth">
-    <div class="control-group">
-        <label class="control-label">手机号码：</label>
-        <div class="controls">
-            <input type="text" class="text-input" id="J_receiveMob" maxlength="11" autocomplete="off" style="width: 215px;"/>
-        </div>
-    </div>
-    <!--物流方式-->
-    <div class="control-group" id="bidi-form-17">
-        <label class="control-label">身份证号码：</label>
-        <div class="controls">
-            <input type="text" class="text-input" id="J_IDCard" maxlength="18" autocomplete="off" style="width: 215px;"/>
-        </div>
-    </div>
-
-</form>
+<h2>Textmagnifier的demo</h2>
 
 <script>
     var S = KISSY;
@@ -43,7 +27,7 @@
         S.config({
             packages:[
                 {
-                    name:"kg/textMagnifier/2.0.0",
+                    name:"kg/textmagnifier/2.0.0",
                     path:srcPath,
                     charset:"utf-8",
                     ignorePackageNameInUri:true
@@ -52,23 +36,9 @@
         });
     }
 
-
-    S.use('kg/textMagnifier/2.0.0/index,kg/textMagnifier/2.0.0/style.css',function (S,TextMagnifier) {
-        //手机号码放大
-        new TextMagnifier("#J_receiveMob",{
-            align:"top",
-            splitType:[3,4,4],
-            delimiter:'-'
-        }).render();
-
-        //身份证放大
-        new TextMagnifier("#J_IDCard",{
-            splitType:[6,4,4,4],
-            delimiter:' ',
-            width:253,
-            explainText:"请输入18位数字的身份证号码"
-        }).render();
-    });
+    S.use('kg/textmagnifier/2.0.0/index', function (S, Textmagnifier) {
+          new Textmagnifier();
+    })
 </script>
 </body>
 </html>
