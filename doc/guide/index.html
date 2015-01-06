@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>textMagnifier</title>
+    <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com-prettify.css">
+    <link rel="stylesheet" href="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.css">
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdn.staticfile.org/prettify/r298/prettify.min.js"></script>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.8/seed-min.js" data-config="{combine:true}"></script>
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div id="header"><a href="http://docs.kissyui.com/" class="logo">kissy</a>
+      <nav><a href="http://docs.kissyui.com/1.4/docs/html/coms.html">优秀组件推荐</a></nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3 bs-docs-sidebar">
+          <ul data-spy="affix" data-offset-top="0" class="nav nav-list bs-docs-sidenav"></ul>
+        </div>
+        <div class="span9 bs-docs-content">
+          <h1 data-id="undefined" class="title">textMagnifier</h1>
+          <p class="author-wrapper"><span>组件有问题？旺旺联系作者：</span><a href="https://github.com/undefined" target="_blank" data-name="shuilan.cj" class="author"><img src="http://0.gravatar.com/avatar/5e2480feb998c6d3ae1036029870fcbd?s=60" alt="shuilan.cj"></a><span class="author-name">shuilan.cj</span>
+          </p>
+          <div class="common-link"><a href="../demo/index.html" target="_blank" class="demo">示例</a><a href="https://github.com/kissygalleryteam/textMagnifier" target="_blank" class="source">源码</a></div>
+          <p class="com-info"><span class="info-label">View</span><span data-com="textMagnifier" class="J_View">473</span></p>
+          <p class="com-info"><span class="info-label">kissy版本</span><span>1.4.X</span>
+          </p><h2 id="-">综述</h2>
+<ul>
+<li>版本：1.1</li>
+<li>基于：kissy2.0.0+</li>
+<li>作者：水澜(1.0) | 明河（1.1）</li>
+</ul>
+<p>仿支付宝的文本输入框放大组件，同时还具有以下特性：</p>
+<ul>
+<li>拆分规则和分隔符可自定义，例如设置手机号的分割方式为[3,4,4],分割符为&#39;-&#39;,则被放大显示为187-XXXX-XXXX</li>
+<li>可以在放大的同时给出相应的文案提示</li>
+<li>可以自行设置对齐方式</li>
+</ul>
+<h2 id="-">使用方法</h2>
+<h2 id="html">HTML</h2>
+<pre><code>&lt;input type=&quot;text&quot; class=&quot;text-input&quot; id=&quot;J_receiveMob&quot; maxlength=&quot;11&quot; autocomplete=&quot;off&quot;/&gt;
+</code></pre><h2 id="-">初始化组件</h2>
+<pre><code>S.use(&#39;kg/textMagnifier/1.1/index,kg/textMagnifier/1.1/style.css&#39;,function (S,TextMagnifier) {
+    //手机号码放大
+    new TextMagnifier(&quot;#J_receiveMob&quot;,{
+        align:&quot;top&quot;,
+        splitType:[3,4,4],
+        delimiter:&#39; &#39;
+    }).render();
+});
+</code></pre>
+          <div style="display:none;"><script type="text/javascript" src="http://tajs.qq.com/stats?sId=36378479" charset="UTF-8"></script></div>
+          <script src="http://docs.kissyui.com/1.4/source/guideline/templates/assets/com.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
